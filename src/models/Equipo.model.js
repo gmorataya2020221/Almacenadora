@@ -3,12 +3,10 @@ var Schema = mongoose.Schema;
 
 var ProductosSchema = Schema({
     nombre: String,
-    sabores: [],
-    provedores: [{
-        idProveedor: { type: Schema.Types.ObjectId, ref: 'Proveedores'}
-    }],
-    cantidad: Number,
-    precio: Number
+    CantidadJugardores: Number,
+    DineroTransferencias: Number,
+    IDcategoria:{ type: Schema.Types.ObjectId, ref: 'Categorias'}
+    
 })
 
 module.exports = mongoose.model('Productos', ProductosSchema)

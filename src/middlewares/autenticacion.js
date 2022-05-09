@@ -1,11 +1,11 @@
 const jwt_simple = require('jwt-simple');
 const moment = require('moment');
-const secret = 'llave';
+const secret = 'clave_secreta_IN6BV';
 
 exports.Auth = function(req, res, next) {
     if ( !req.headers.authorization ) {
         return res.status(404)
-            .send({ mensaje: 'La peticion no cuenta con la cabecera authorization' });
+            .send({ mensaje: 'La peticion, no posee la cabecera de Autenticacion' });
     }
 
     var token = req.headers.authorization.replace(/['"]+/g, '');
